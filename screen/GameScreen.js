@@ -85,6 +85,7 @@ function GameScreen ({userNumber,onGameOver}) {
         </Card>
         <View style={styles.listContainer}>
             {/* {guessRouds.map(guessRound => <Text key={guessRound}>{guessRound}</Text>)}  //when we have limited item */}
+            {/** we can use flatlist to diaplay a mare which have long list */}
             <FlatList 
             data={guessRouds}
             renderItem={(itemData)=>
