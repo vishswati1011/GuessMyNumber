@@ -15,15 +15,15 @@ export default NumberContainer;
 const styles =StyleSheet.create({
     container :{
         borderWidth:4,
-        borderColor:Colors.assent500,
         padding:24,
         borderRadius:8,
         margin:24,
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
+        borderColor:Colors.accent500,
     },
     numberText:{
-        color:Colors.assent500,
+        color:Colors.accent500,
         fontSize:30,
         fontWeight:'bold'
     }

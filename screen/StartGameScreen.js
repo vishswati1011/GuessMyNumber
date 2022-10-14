@@ -1,7 +1,9 @@
-import { View, TextInput, StyleSheet, Alert } from 'react-native'
+import { View, TextInput, StyleSheet, Alert,Text } from 'react-native'
 import PrimaryButton from '../components/ui/PrimaryButton';
 import { useState } from 'react';
 import Colors from '../constants/colors'
+import Title from '../components/ui/Title';
+import Card from '../components/ui/Card'
 function StrtGameScreen({onPickNumber}) {
 
     const  [enteredNumber,setEnteredNumber]= useState('');
@@ -24,7 +26,11 @@ function StrtGameScreen({onPickNumber}) {
         onPickNumber(chosenNumber);
     }
     return (
-        <View style={styles.inputContainr}>
+        <View style={styles.rootContainer}>
+            <Title> Guess My Number</Title>
+        {/* <View style={styles.inputContainr}> */}
+        <Card>
+            <Text style={styles.instructionText}>Enter a Number</Text>
             <TextInput
                 style={styles.numberInput}
                 maxLength={2}
@@ -43,7 +49,8 @@ function StrtGameScreen({onPickNumber}) {
                     <PrimaryButton onConfirmPress={confirmInputHandler}>Confirm</PrimaryButton>
                 </View>
             </View>
-
+            </Card>
+        {/* </View> */}
         </View>
     )
 }
@@ -51,11 +58,22 @@ function StrtGameScreen({onPickNumber}) {
 export default StrtGameScreen;
 
 const styles = StyleSheet.create({
+
+    rootContainer :{
+        flex:1,
+        marginTop:100,
+        alignItems:'center'
+    },
+    instructionText:{
+        color:Colors.accent500,
+        fontSize:20
+
+    },
     inputContainr: {
         justifyContent: 'center',
         // alignItems:'stretch'
         alignItems: 'center',
-        marginTop: 100,
+        marginTop: 50,
         marginHorizontal: 24,
         padding: 16,
         backgroundColor: Colors.primary800,
