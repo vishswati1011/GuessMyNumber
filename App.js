@@ -2,7 +2,8 @@
 import {
   StyleSheet,
   ImageBackground,
-  SafeAreaView
+  SafeAreaView,
+  StatusBar
 } from 'react-native';
 import { useState } from 'react';
 import StartGameScreen from './screen/StartGameScreen'
@@ -40,6 +41,7 @@ const App =()=> {
   }
   
   return (
+    // <StatusBar style="light">
     <LinearGradient style={styles.rootScreen} colors={[Colors.primary700,Colors.accent500]}>
       <ImageBackground resizeMode ="cover"
       style={styles.rootScreen}
@@ -50,6 +52,7 @@ const App =()=> {
           </SafeAreaView>
       </ImageBackground>
     </LinearGradient>
+    // </StatusBar>
   )
   
 };
